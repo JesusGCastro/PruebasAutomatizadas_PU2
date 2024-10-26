@@ -4,7 +4,6 @@ Resource    ../Recursos/keywords.robot
 Resource    ../Datos/variables.robot
 Test Teardown    Close Browser
 
-#//button[@Class='added-manually']
 *** Test Cases ***
 Agregar/Quitar Elementos
     Iniciar Navegador   ${URL_1}    ${BROWSER}
@@ -24,3 +23,14 @@ Drag and Drop
     Reload Page
     Drag and Drop                               //header[text()='B']    //div[@id='column-a']
     Element Should Contain                      //div[@id='column-a']   B
+
+Autenticación con Formulario
+    Iniciar Navegador   ${URL_9}    ${BROWSER}
+    Inicio Sesion 9                             tomsmith    SuperSecretPassword!
+    Element Should Contain                      xpath://div[@id='flash']    You logged into a secure area!
+    Click Link                                  //a[@class='button secondary radius']
+    Element Should Contain                      xpath://div[@id='flash']    You logged out of the secure area!
+    Inicio Sesion 9                             tomsmith1   SuperSecretPassword!
+    Element Should Contain                      xpath://div[@id='flash']    Your username is invalid!
+    Inicio Sesion 9                             tomsmith    SuperS1ecretPassword!
+    Element Should Contain                      xpath://div[@id='flash']    Your password is invalid!

@@ -1,818 +1,950 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.3 on win32)" generated="2024-10-25T21:53:26.856460" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.3 on win32)" generated="2024-10-25T23:22:18.141609" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="C:\Users\Jesus\Documents\GitHub\PruebasAutomatizadas_PU2\PruebasAutomatizadas_PU2\Test\test.robot">
-<test id="s1-t1" name="Agregar/Quitar Elementos" line="9">
+<test id="s1-t1" name="Agregar/Quitar Elementos" line="8">
 <kw name="Iniciar Navegador" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:27.204194" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<msg time="2024-10-25T23:22:18.491352" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-25T21:53:27.204194" elapsed="3.782104"/>
+<status status="PASS" start="2024-10-25T23:22:18.491352" elapsed="3.209664"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-25T21:53:30.986800" elapsed="0.027637"/>
+<status status="PASS" start="2024-10-25T23:22:21.701519" elapsed="0.033667"/>
 </kw>
 <arg>${URL_1}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2024-10-25T21:53:27.203189" elapsed="3.811248"/>
+<status status="PASS" start="2024-10-25T23:22:18.490348" elapsed="3.244838"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath://button</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-25T21:53:31.014940" elapsed="0.028643"/>
+<status status="PASS" start="2024-10-25T23:22:21.735186" elapsed="0.031156"/>
 </kw>
 <kw name="Dar click N veces" owner="keywords">
 <for flavor="IN RANGE">
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:31.051121" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:21.769859" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:31.051121" elapsed="0.051254"/>
+<status status="PASS" start="2024-10-25T23:22:21.769357" elapsed="0.049749"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:31.602982" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:22.319717" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:31.102375" elapsed="0.500607"/>
+<status status="PASS" start="2024-10-25T23:22:21.819607" elapsed="0.500621"/>
 </kw>
 <var name="${i}">0</var>
-<status status="PASS" start="2024-10-25T21:53:31.050618" elapsed="0.552364"/>
+<status status="PASS" start="2024-10-25T23:22:21.769357" elapsed="0.550871"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:31.603484" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:22.320730" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:31.603484" elapsed="0.028139"/>
+<status status="PASS" start="2024-10-25T23:22:22.320730" elapsed="0.031647"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:32.132511" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:22.852449" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:31.631623" elapsed="0.500888"/>
+<status status="PASS" start="2024-10-25T23:22:22.352377" elapsed="0.500589"/>
 </kw>
 <var name="${i}">1</var>
-<status status="PASS" start="2024-10-25T21:53:31.603484" elapsed="0.529027"/>
+<status status="PASS" start="2024-10-25T23:22:22.320730" elapsed="0.532236"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:32.133014" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:22.853971" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:32.133014" elapsed="0.032233"/>
+<status status="PASS" start="2024-10-25T23:22:22.853468" elapsed="0.030135"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:32.666161" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:23.383738" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:32.165247" elapsed="0.500914"/>
+<status status="PASS" start="2024-10-25T23:22:22.883603" elapsed="0.500135"/>
 </kw>
 <var name="${i}">2</var>
-<status status="PASS" start="2024-10-25T21:53:32.132511" elapsed="0.533650"/>
+<status status="PASS" start="2024-10-25T23:22:22.852966" elapsed="0.530772"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:32.666659" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:23.384241" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:32.666659" elapsed="0.038191"/>
+<status status="PASS" start="2024-10-25T23:22:23.384241" elapsed="0.036684"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:33.204869" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:23.921449" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:32.704850" elapsed="0.500019"/>
+<status status="PASS" start="2024-10-25T23:22:23.420925" elapsed="0.500524"/>
 </kw>
 <var name="${i}">3</var>
-<status status="PASS" start="2024-10-25T21:53:32.666161" elapsed="0.538708"/>
+<status status="PASS" start="2024-10-25T23:22:23.383738" elapsed="0.537711"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:33.205368" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:23.921950" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:33.205368" elapsed="0.026132"/>
+<status status="PASS" start="2024-10-25T23:22:23.921950" elapsed="0.029144"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:33.731908" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:24.451691" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:33.231500" elapsed="0.500408"/>
+<status status="PASS" start="2024-10-25T23:22:23.951597" elapsed="0.500094"/>
 </kw>
 <var name="${i}">4</var>
-<status status="PASS" start="2024-10-25T21:53:33.204869" elapsed="0.527039"/>
+<status status="PASS" start="2024-10-25T23:22:23.921449" elapsed="0.530242"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:33.732931" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:24.452194" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:33.732931" elapsed="0.031641"/>
+<status status="PASS" start="2024-10-25T23:22:24.452194" elapsed="0.029137"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:34.264635" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:24.982196" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:33.764572" elapsed="0.500063"/>
+<status status="PASS" start="2024-10-25T23:22:24.481331" elapsed="0.500865"/>
 </kw>
 <var name="${i}">5</var>
-<status status="PASS" start="2024-10-25T21:53:33.732429" elapsed="0.532206"/>
+<status status="PASS" start="2024-10-25T23:22:24.451691" elapsed="0.530505"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:34.265637" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:24.982708" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:34.265135" elapsed="0.029649"/>
+<status status="PASS" start="2024-10-25T23:22:24.982708" elapsed="0.029368"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:34.795361" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:25.512730" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:34.295286" elapsed="0.500075"/>
+<status status="PASS" start="2024-10-25T23:22:25.012579" elapsed="0.500668"/>
 </kw>
 <var name="${i}">6</var>
-<status status="PASS" start="2024-10-25T21:53:34.265135" elapsed="0.530226"/>
+<status status="PASS" start="2024-10-25T23:22:24.982708" elapsed="0.530539"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:34.795873" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:25.514252" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:34.795873" elapsed="0.031712"/>
+<status status="PASS" start="2024-10-25T23:22:25.513749" elapsed="0.029632"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:35.328277" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:26.043743" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:34.827585" elapsed="0.500692"/>
+<status status="PASS" start="2024-10-25T23:22:25.543381" elapsed="0.500362"/>
 </kw>
 <var name="${i}">7</var>
-<status status="PASS" start="2024-10-25T21:53:34.795361" elapsed="0.533438"/>
+<status status="PASS" start="2024-10-25T23:22:25.513749" elapsed="0.530515"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:35.329300" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:26.044766" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:35.329300" elapsed="0.029279"/>
+<status status="PASS" start="2024-10-25T23:22:26.044766" elapsed="0.030254"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:35.859362" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:26.576393" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:35.359082" elapsed="0.500280"/>
+<status status="PASS" start="2024-10-25T23:22:26.075522" elapsed="0.500871"/>
 </kw>
 <var name="${i}">8</var>
-<status status="PASS" start="2024-10-25T21:53:35.328799" elapsed="0.530563"/>
+<status status="PASS" start="2024-10-25T23:22:26.044264" elapsed="0.532129"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:35.860366" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:26.577409" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:35.859864" elapsed="0.031789"/>
+<status status="PASS" start="2024-10-25T23:22:26.576914" elapsed="0.032979"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:36.392229" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:27.110590" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:35.892156" elapsed="0.500073"/>
+<status status="PASS" start="2024-10-25T23:22:26.609893" elapsed="0.500697"/>
 </kw>
 <var name="${i}">9</var>
-<status status="PASS" start="2024-10-25T21:53:35.859864" elapsed="0.532365"/>
+<status status="PASS" start="2024-10-25T23:22:26.576914" elapsed="0.533676"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:36.393248" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:27.111609" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:36.392745" elapsed="0.029531"/>
+<status status="PASS" start="2024-10-25T23:22:27.111609" elapsed="0.030759"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:36.922914" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:27.643164" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:36.422276" elapsed="0.500638"/>
+<status status="PASS" start="2024-10-25T23:22:27.142868" elapsed="0.500296"/>
 </kw>
 <var name="${i}">10</var>
-<status status="PASS" start="2024-10-25T21:53:36.392745" elapsed="0.530169"/>
+<status status="PASS" start="2024-10-25T23:22:27.111108" elapsed="0.532056"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:36.923889" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:27.643683" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:36.923387" elapsed="0.036444"/>
+<status status="PASS" start="2024-10-25T23:22:27.643683" elapsed="0.032916"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:37.460406" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:28.176750" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:36.960334" elapsed="0.500072"/>
+<status status="PASS" start="2024-10-25T23:22:27.676599" elapsed="0.500151"/>
 </kw>
 <var name="${i}">11</var>
-<status status="PASS" start="2024-10-25T21:53:36.923387" elapsed="0.537019"/>
+<status status="PASS" start="2024-10-25T23:22:27.643164" elapsed="0.533586"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:37.460924" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:28.177268" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:37.460924" elapsed="0.031642"/>
+<status status="PASS" start="2024-10-25T23:22:28.177268" elapsed="0.030636"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:37.992621" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:28.708477" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:37.492566" elapsed="0.500055"/>
+<status status="PASS" start="2024-10-25T23:22:28.208407" elapsed="0.500070"/>
 </kw>
 <var name="${i}">12</var>
-<status status="PASS" start="2024-10-25T21:53:37.460406" elapsed="0.532215"/>
+<status status="PASS" start="2024-10-25T23:22:28.176750" elapsed="0.531727"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:37.993623" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:28.708994" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:37.993122" elapsed="0.034315"/>
+<status status="PASS" start="2024-10-25T23:22:28.708477" elapsed="0.028652"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:38.527993" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:29.237180" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:38.027940" elapsed="0.500053"/>
+<status status="PASS" start="2024-10-25T23:22:28.737129" elapsed="0.500051"/>
 </kw>
 <var name="${i}">13</var>
-<status status="PASS" start="2024-10-25T21:53:37.993122" elapsed="0.534871"/>
+<status status="PASS" start="2024-10-25T23:22:28.708477" elapsed="0.528703"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:38.528511" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:29.237680" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:38.528511" elapsed="0.033219"/>
+<status status="PASS" start="2024-10-25T23:22:29.237680" elapsed="0.030150"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:39.062242" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:29.768655" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:38.561730" elapsed="0.500512"/>
+<status status="PASS" start="2024-10-25T23:22:29.268334" elapsed="0.500321"/>
 </kw>
 <var name="${i}">14</var>
-<status status="PASS" start="2024-10-25T21:53:38.527993" elapsed="0.534249"/>
+<status status="PASS" start="2024-10-25T23:22:29.237180" elapsed="0.531475"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:39.062745" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:29.769155" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:39.062745" elapsed="0.036180"/>
+<status status="PASS" start="2024-10-25T23:22:29.769155" elapsed="0.030281"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:39.599702" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:30.299983" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:39.098925" elapsed="0.500777"/>
+<status status="PASS" start="2024-10-25T23:22:29.799436" elapsed="0.500547"/>
 </kw>
 <var name="${i}">15</var>
-<status status="PASS" start="2024-10-25T21:53:39.062242" elapsed="0.537460"/>
+<status status="PASS" start="2024-10-25T23:22:29.769155" elapsed="0.531332"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:39.600204" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:30.300989" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:39.600204" elapsed="0.043719"/>
+<status status="PASS" start="2024-10-25T23:22:30.300487" elapsed="0.035176"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:40.144459" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:30.836644" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:39.644425" elapsed="0.500034"/>
+<status status="PASS" start="2024-10-25T23:22:30.336164" elapsed="0.500480"/>
 </kw>
 <var name="${i}">16</var>
-<status status="PASS" start="2024-10-25T21:53:39.600204" elapsed="0.544255"/>
+<status status="PASS" start="2024-10-25T23:22:30.300487" elapsed="0.536157"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:40.144960" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:30.837147" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:40.144960" elapsed="0.031658"/>
+<status status="PASS" start="2024-10-25T23:22:30.837147" elapsed="0.037187"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:40.677153" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:31.374434" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:40.176618" elapsed="0.500535"/>
+<status status="PASS" start="2024-10-25T23:22:30.874334" elapsed="0.500100"/>
 </kw>
 <var name="${i}">17</var>
-<status status="PASS" start="2024-10-25T21:53:40.144960" elapsed="0.532193"/>
+<status status="PASS" start="2024-10-25T23:22:30.836644" elapsed="0.537790"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:40.677653" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:31.374937" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:40.677653" elapsed="0.031659"/>
+<status status="PASS" start="2024-10-25T23:22:31.374937" elapsed="0.033669"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:41.210009" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:31.909177" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:40.709312" elapsed="0.500697"/>
+<status status="PASS" start="2024-10-25T23:22:31.408606" elapsed="0.500571"/>
 </kw>
 <var name="${i}">18</var>
-<status status="PASS" start="2024-10-25T21:53:40.677153" elapsed="0.532856"/>
+<status status="PASS" start="2024-10-25T23:22:31.374937" elapsed="0.534240"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:41.210512" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg time="2024-10-25T23:22:31.909680" level="INFO">Clicking element 'xpath://button'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:41.210512" elapsed="0.028140"/>
+<status status="PASS" start="2024-10-25T23:22:31.909680" elapsed="0.034170"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:41.739181" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:32.444632" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:41.239154" elapsed="0.500027"/>
+<status status="PASS" start="2024-10-25T23:22:31.943850" elapsed="0.500782"/>
 </kw>
 <var name="${i}">19</var>
-<status status="PASS" start="2024-10-25T21:53:41.210512" elapsed="0.528669"/>
+<status status="PASS" start="2024-10-25T23:22:31.909177" elapsed="0.535455"/>
 </iter>
 <var>${i}</var>
 <value>${veces}</value>
-<status status="PASS" start="2024-10-25T21:53:31.050116" elapsed="10.689065"/>
+<status status="PASS" start="2024-10-25T23:22:21.768853" elapsed="10.675779"/>
 </for>
 <arg>20</arg>
 <arg>xpath://button</arg>
-<status status="PASS" start="2024-10-25T21:53:31.049614" elapsed="10.689567"/>
+<status status="PASS" start="2024-10-25T23:22:21.767347" elapsed="10.677285"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:43.740014" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-10-25T23:22:34.446649" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:41.739680" elapsed="2.000334"/>
+<status status="PASS" start="2024-10-25T23:22:32.445637" elapsed="2.001012"/>
 </kw>
 <kw name="Verificar cantidad botones" owner="keywords">
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:43.753581" level="INFO">${CantidadBotones} = 20</msg>
+<msg time="2024-10-25T23:22:34.457704" level="INFO">${CantidadBotones} = 20</msg>
 <var>${CantidadBotones}</var>
 <arg>${xpath}</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:43.741019" elapsed="0.013066"/>
+<status status="PASS" start="2024-10-25T23:22:34.447151" elapsed="0.010553"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2024-10-25T21:53:43.754085" level="INFO">Argument types are:
+<msg time="2024-10-25T23:22:34.458206" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${CantidadBotones}</arg>
 <arg>${cantidad}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2024-10-25T21:53:43.754085" elapsed="0.000502"/>
+<status status="PASS" start="2024-10-25T23:22:34.458206" elapsed="0.000000"/>
 </kw>
 <arg>//button[@Class='added-manually']</arg>
 <arg>20</arg>
-<status status="PASS" start="2024-10-25T21:53:43.740517" elapsed="0.014070"/>
+<status status="PASS" start="2024-10-25T23:22:34.446649" elapsed="0.011557"/>
 </kw>
 <kw name="Dar click N veces" owner="keywords">
 <for flavor="IN RANGE">
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:43.755592" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:34.459211" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:43.755089" elapsed="0.033668"/>
+<status status="PASS" start="2024-10-25T23:22:34.459211" elapsed="0.036684"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:44.289755" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:34.996431" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:43.788757" elapsed="0.500998"/>
+<status status="PASS" start="2024-10-25T23:22:34.496398" elapsed="0.500033"/>
 </kw>
 <var name="${i}">0</var>
-<status status="PASS" start="2024-10-25T21:53:43.755089" elapsed="0.534666"/>
+<status status="PASS" start="2024-10-25T23:22:34.459211" elapsed="0.537220"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:44.290258" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:34.996931" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:44.290258" elapsed="0.029144"/>
+<status status="PASS" start="2024-10-25T23:22:34.996931" elapsed="0.031156"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:44.820459" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:35.528694" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:44.319905" elapsed="0.500554"/>
+<status status="PASS" start="2024-10-25T23:22:35.028087" elapsed="0.500607"/>
 </kw>
 <var name="${i}">1</var>
-<status status="PASS" start="2024-10-25T21:53:44.289755" elapsed="0.530704"/>
+<status status="PASS" start="2024-10-25T23:22:34.996431" elapsed="0.532263"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:44.821464" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:35.529196" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:44.820961" elapsed="0.046230"/>
+<status status="PASS" start="2024-10-25T23:22:35.529196" elapsed="0.033166"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:45.367714" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:36.062903" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:44.867696" elapsed="0.500018"/>
+<status status="PASS" start="2024-10-25T23:22:35.562362" elapsed="0.500541"/>
 </kw>
 <var name="${i}">2</var>
-<status status="PASS" start="2024-10-25T21:53:44.820961" elapsed="0.546753"/>
+<status status="PASS" start="2024-10-25T23:22:35.528694" elapsed="0.534209"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:45.368213" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:36.063906" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:45.368213" elapsed="0.027638"/>
+<status status="PASS" start="2024-10-25T23:22:36.063403" elapsed="0.034172"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:45.896851" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:36.597627" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:45.395851" elapsed="0.501000"/>
+<status status="PASS" start="2024-10-25T23:22:36.097575" elapsed="0.500052"/>
 </kw>
 <var name="${i}">3</var>
-<status status="PASS" start="2024-10-25T21:53:45.367714" elapsed="0.529137"/>
+<status status="PASS" start="2024-10-25T23:22:36.062903" elapsed="0.534724"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:45.897354" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:36.598127" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:45.897354" elapsed="0.033668"/>
+<status status="PASS" start="2024-10-25T23:22:36.598127" elapsed="0.030149"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:46.431250" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:37.128948" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:45.931022" elapsed="0.500228"/>
+<status status="PASS" start="2024-10-25T23:22:36.628276" elapsed="0.500672"/>
 </kw>
 <var name="${i}">4</var>
-<status status="PASS" start="2024-10-25T21:53:45.897354" elapsed="0.533896"/>
+<status status="PASS" start="2024-10-25T23:22:36.597627" elapsed="0.531321"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:46.431753" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:37.129451" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:46.431753" elapsed="0.030652"/>
+<status status="PASS" start="2024-10-25T23:22:37.129451" elapsed="0.029647"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:46.962839" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:37.659766" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:46.462405" elapsed="0.500434"/>
+<status status="PASS" start="2024-10-25T23:22:37.159098" elapsed="0.500668"/>
 </kw>
 <var name="${i}">5</var>
-<status status="PASS" start="2024-10-25T21:53:46.431250" elapsed="0.531589"/>
+<status status="PASS" start="2024-10-25T23:22:37.129451" elapsed="0.530315"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:46.963844" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:37.660773" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:46.963342" elapsed="0.032160"/>
+<status status="PASS" start="2024-10-25T23:22:37.660269" elapsed="0.035678"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:47.496290" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:38.197108" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:46.995502" elapsed="0.500788"/>
+<status status="PASS" start="2024-10-25T23:22:37.696450" elapsed="0.500658"/>
 </kw>
 <var name="${i}">6</var>
-<status status="PASS" start="2024-10-25T21:53:46.963342" elapsed="0.532948"/>
+<status status="PASS" start="2024-10-25T23:22:37.660269" elapsed="0.536839"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:47.496793" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:38.198114" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:47.496793" elapsed="0.029647"/>
+<status status="PASS" start="2024-10-25T23:22:38.197612" elapsed="0.034672"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:48.027368" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:38.732719" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:47.526943" elapsed="0.500425"/>
+<status status="PASS" start="2024-10-25T23:22:38.232284" elapsed="0.500435"/>
 </kw>
 <var name="${i}">7</var>
-<status status="PASS" start="2024-10-25T21:53:47.496290" elapsed="0.531078"/>
+<status status="PASS" start="2024-10-25T23:22:38.197612" elapsed="0.535107"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:48.028372" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:38.733222" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:48.027869" elapsed="0.028644"/>
+<status status="PASS" start="2024-10-25T23:22:38.733222" elapsed="0.032663"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:48.557122" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:39.266425" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:48.057015" elapsed="0.500107"/>
+<status status="PASS" start="2024-10-25T23:22:38.765885" elapsed="0.500540"/>
 </kw>
 <var name="${i}">8</var>
-<status status="PASS" start="2024-10-25T21:53:48.027869" elapsed="0.529253"/>
+<status status="PASS" start="2024-10-25T23:22:38.733222" elapsed="0.533203"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:48.557626" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:39.266928" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:48.557626" elapsed="0.031153"/>
+<status status="PASS" start="2024-10-25T23:22:39.266928" elapsed="0.030653"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:49.089763" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:39.797855" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:48.588779" elapsed="0.500984"/>
+<status status="PASS" start="2024-10-25T23:22:39.297581" elapsed="0.500274"/>
 </kw>
 <var name="${i}">9</var>
-<status status="PASS" start="2024-10-25T21:53:48.557122" elapsed="0.532641"/>
+<status status="PASS" start="2024-10-25T23:22:39.266928" elapsed="0.530927"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:49.090265" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:39.798358" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:49.090265" elapsed="0.035679"/>
+<status status="PASS" start="2024-10-25T23:22:39.798358" elapsed="0.033668"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:49.626484" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:40.332565" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:49.126447" elapsed="0.500037"/>
+<status status="PASS" start="2024-10-25T23:22:39.832026" elapsed="0.500539"/>
 </kw>
 <var name="${i}">10</var>
-<status status="PASS" start="2024-10-25T21:53:49.089763" elapsed="0.536721"/>
+<status status="PASS" start="2024-10-25T23:22:39.798358" elapsed="0.534207"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:49.626984" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:40.333065" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:49.626984" elapsed="0.032161"/>
+<status status="PASS" start="2024-10-25T23:22:40.333065" elapsed="0.029145"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:50.159345" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:40.862754" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:49.659145" elapsed="0.500200"/>
+<status status="PASS" start="2024-10-25T23:22:40.362714" elapsed="0.500040"/>
 </kw>
 <var name="${i}">11</var>
-<status status="PASS" start="2024-10-25T21:53:49.626984" elapsed="0.532361"/>
+<status status="PASS" start="2024-10-25T23:22:40.332565" elapsed="0.530189"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:50.159847" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:40.863256" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:50.159847" elapsed="0.033166"/>
+<status status="PASS" start="2024-10-25T23:22:40.863256" elapsed="0.033166"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:50.693044" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:41.397791" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:50.193013" elapsed="0.500031"/>
+<status status="PASS" start="2024-10-25T23:22:40.896422" elapsed="0.501369"/>
 </kw>
 <var name="${i}">12</var>
-<status status="PASS" start="2024-10-25T21:53:50.159847" elapsed="0.533197"/>
+<status status="PASS" start="2024-10-25T23:22:40.862754" elapsed="0.535037"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:50.694046" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:41.398294" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:50.693544" elapsed="0.030653"/>
+<status status="PASS" start="2024-10-25T23:22:41.398294" elapsed="0.032162"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:51.224736" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:41.931452" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:50.724197" elapsed="0.500539"/>
+<status status="PASS" start="2024-10-25T23:22:41.430456" elapsed="0.500996"/>
 </kw>
 <var name="${i}">13</var>
-<status status="PASS" start="2024-10-25T21:53:50.693544" elapsed="0.531192"/>
+<status status="PASS" start="2024-10-25T23:22:41.398294" elapsed="0.533158"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:51.225236" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:41.932456" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:51.225236" elapsed="0.031155"/>
+<status status="PASS" start="2024-10-25T23:22:41.931954" elapsed="0.030653"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:51.757073" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:42.462640" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:51.256894" elapsed="0.500179"/>
+<status status="PASS" start="2024-10-25T23:22:41.962607" elapsed="0.500033"/>
 </kw>
 <var name="${i}">14</var>
-<status status="PASS" start="2024-10-25T21:53:51.224736" elapsed="0.532337"/>
+<status status="PASS" start="2024-10-25T23:22:41.931954" elapsed="0.530686"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:51.757576" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:42.463142" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:51.757576" elapsed="0.036180"/>
+<status status="PASS" start="2024-10-25T23:22:42.463142" elapsed="0.031155"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:52.294474" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:42.994837" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:51.793756" elapsed="0.500718"/>
+<status status="PASS" start="2024-10-25T23:22:42.494297" elapsed="0.500540"/>
 </kw>
 <var name="${i}">15</var>
-<status status="PASS" start="2024-10-25T21:53:51.757073" elapsed="0.537401"/>
+<status status="PASS" start="2024-10-25T23:22:42.463142" elapsed="0.531695"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:52.294978" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:42.995337" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:52.294978" elapsed="0.032663"/>
+<status status="PASS" start="2024-10-25T23:22:42.995337" elapsed="0.035677"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:52.828359" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:43.531900" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:52.327641" elapsed="0.500718"/>
+<status status="PASS" start="2024-10-25T23:22:43.031517" elapsed="0.500383"/>
 </kw>
 <var name="${i}">16</var>
-<status status="PASS" start="2024-10-25T21:53:52.294474" elapsed="0.533885"/>
+<status status="PASS" start="2024-10-25T23:22:42.995337" elapsed="0.536563"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:52.828861" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:43.532905" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:52.828861" elapsed="0.033166"/>
+<status status="PASS" start="2024-10-25T23:22:43.532403" elapsed="0.034673"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:53.362285" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:44.067110" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:52.862027" elapsed="0.500258"/>
+<status status="PASS" start="2024-10-25T23:22:43.567076" elapsed="0.500034"/>
 </kw>
 <var name="${i}">17</var>
-<status status="PASS" start="2024-10-25T21:53:52.828359" elapsed="0.533926"/>
+<status status="PASS" start="2024-10-25T23:22:43.532403" elapsed="0.534707"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:53.362788" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:44.067610" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:53.362788" elapsed="0.032662"/>
+<status status="PASS" start="2024-10-25T23:22:44.067610" elapsed="0.027639"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:53.896455" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:44.595649" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:53.395450" elapsed="0.501005"/>
+<status status="PASS" start="2024-10-25T23:22:44.095249" elapsed="0.500400"/>
 </kw>
 <var name="${i}">18</var>
-<status status="PASS" start="2024-10-25T21:53:53.362788" elapsed="0.533667"/>
+<status status="PASS" start="2024-10-25T23:22:44.067110" elapsed="0.528539"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:53.896958" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
+<msg time="2024-10-25T23:22:44.596654" level="INFO">Clicking element '//button[@Class='added-manually']'.</msg>
 <arg>${xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:53.896958" elapsed="0.027638"/>
+<status status="PASS" start="2024-10-25T23:22:44.596152" elapsed="0.038692"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:54.425377" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-10-25T23:22:45.135426" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:53.924596" elapsed="0.500781"/>
+<status status="PASS" start="2024-10-25T23:22:44.635347" elapsed="0.500079"/>
 </kw>
 <var name="${i}">19</var>
-<status status="PASS" start="2024-10-25T21:53:53.896455" elapsed="0.528922"/>
+<status status="PASS" start="2024-10-25T23:22:44.596152" elapsed="0.539274"/>
 </iter>
 <var>${i}</var>
 <value>${veces}</value>
-<status status="PASS" start="2024-10-25T21:53:43.755089" elapsed="10.670288"/>
+<status status="PASS" start="2024-10-25T23:22:34.458709" elapsed="10.676717"/>
 </for>
 <arg>20</arg>
 <arg>//button[@Class='added-manually']</arg>
-<status status="PASS" start="2024-10-25T21:53:43.754587" elapsed="10.670790"/>
+<status status="PASS" start="2024-10-25T23:22:34.458709" elapsed="10.677220"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:53:56.426090" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-10-25T23:22:47.136515" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:53:54.425879" elapsed="2.000211"/>
+<status status="PASS" start="2024-10-25T23:22:45.135929" elapsed="2.000586"/>
 </kw>
 <kw name="Verificar cantidad botones" owner="keywords">
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:56.434632" level="INFO">${CantidadBotones} = 0</msg>
+<msg time="2024-10-25T23:22:47.146064" level="INFO">${CantidadBotones} = 0</msg>
 <var>${CantidadBotones}</var>
 <arg>${xpath}</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-10-25T21:53:56.427095" elapsed="0.007537"/>
+<status status="PASS" start="2024-10-25T23:22:47.137521" elapsed="0.008543"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2024-10-25T21:53:56.435135" level="INFO">Argument types are:
+<msg time="2024-10-25T23:22:47.146566" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${CantidadBotones}</arg>
 <arg>${cantidad}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2024-10-25T21:53:56.434632" elapsed="0.000503"/>
+<status status="PASS" start="2024-10-25T23:22:47.146064" elapsed="0.000502"/>
 </kw>
 <arg>//button[@Class='added-manually']</arg>
 <arg>0</arg>
-<status status="PASS" start="2024-10-25T21:53:56.426593" elapsed="0.008542"/>
+<status status="PASS" start="2024-10-25T23:22:47.137018" elapsed="0.009548"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-25T21:53:56.435135" elapsed="2.222796"/>
+<status status="PASS" start="2024-10-25T23:22:47.147571" elapsed="2.306749"/>
 </kw>
-<status status="PASS" start="2024-10-25T21:53:27.202184" elapsed="31.456250"/>
+<status status="PASS" start="2024-10-25T23:22:18.489342" elapsed="30.965481"/>
 </test>
-<test id="s1-t2" name="Drag and Drop" line="19">
+<test id="s1-t2" name="Drag and Drop" line="18">
 <kw name="Iniciar Navegador" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:53:58.660444" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/drag_and_drop'.</msg>
+<msg time="2024-10-25T23:22:49.456339" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/drag_and_drop'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-25T21:53:58.659941" elapsed="3.490614"/>
+<status status="PASS" start="2024-10-25T23:22:49.456339" elapsed="3.275704"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-25T21:54:02.150555" elapsed="0.025125"/>
+<status status="PASS" start="2024-10-25T23:22:52.732546" elapsed="0.046242"/>
 </kw>
 <arg>${URL_6}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2024-10-25T21:53:58.659439" elapsed="3.516744"/>
+<status status="PASS" start="2024-10-25T23:22:49.455831" elapsed="3.322957"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-25T21:54:04.176830" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-10-25T23:22:54.779769" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-25T21:54:02.176183" elapsed="2.000647"/>
+<status status="PASS" start="2024-10-25T23:22:52.779290" elapsed="2.000479"/>
 </kw>
 <kw name="Drag And Drop" owner="SeleniumLibrary">
 <arg>//header[text()='A']</arg>
 <arg>//div[@id='column-b']</arg>
 <doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" start="2024-10-25T21:54:04.176830" elapsed="0.564547"/>
+<status status="PASS" start="2024-10-25T23:22:54.780272" elapsed="0.550278"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:54:04.760593" level="INFO">Element '//div[@id='column-b']' contains text 'A'.</msg>
+<msg time="2024-10-25T23:22:55.348641" level="INFO">Element '//div[@id='column-b']' contains text 'A'.</msg>
 <arg>//div[@id='column-b']</arg>
 <arg>A</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-10-25T21:54:04.741818" elapsed="0.018775"/>
+<status status="PASS" start="2024-10-25T23:22:55.331053" elapsed="0.017588"/>
 </kw>
 <kw name="Reload Page" owner="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" start="2024-10-25T21:54:04.761095" elapsed="0.140613"/>
+<status status="PASS" start="2024-10-25T23:22:55.349153" elapsed="0.150727"/>
 </kw>
 <kw name="Drag And Drop" owner="SeleniumLibrary">
 <arg>//header[text()='B']</arg>
 <arg>//div[@id='column-a']</arg>
 <doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" start="2024-10-25T21:54:04.901708" elapsed="0.574637"/>
+<status status="PASS" start="2024-10-25T23:22:55.500382" elapsed="0.583547"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-25T21:54:05.490916" level="INFO">Element '//div[@id='column-a']' contains text 'B'.</msg>
+<msg time="2024-10-25T23:22:56.097498" level="INFO">Element '//div[@id='column-a']' contains text 'B'.</msg>
 <arg>//div[@id='column-a']</arg>
 <arg>B</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-10-25T21:54:05.476345" elapsed="0.014571"/>
+<status status="PASS" start="2024-10-25T23:22:56.084431" elapsed="0.013067"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-25T21:54:05.491418" elapsed="2.213497"/>
+<status status="PASS" start="2024-10-25T23:22:56.097498" elapsed="2.195852"/>
 </kw>
-<status status="PASS" start="2024-10-25T21:53:58.658936" elapsed="9.045979"/>
+<status status="PASS" start="2024-10-25T23:22:49.455334" elapsed="8.838517"/>
 </test>
-<status status="PASS" start="2024-10-25T21:53:26.858974" elapsed="40.846958"/>
+<test id="s1-t3" name="Autenticación con Formulario" line="27">
+<kw name="Iniciar Navegador" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:22:58.295339" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-25T23:22:58.295339" elapsed="3.335915"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-25T23:23:01.631254" elapsed="0.033681"/>
+</kw>
+<arg>${URL_9}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2024-10-25T23:22:58.294838" elapsed="3.370097"/>
+</kw>
+<kw name="Inicio Sesion 9" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:01.666447" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:01.665941" elapsed="0.107538"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:01.773980" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:01.773479" elapsed="0.091455"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:01.865436" level="INFO">Clicking element 'xpath://button[@class='radius']'.</msg>
+<arg>xpath://button[@class='radius']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:01.864934" elapsed="0.287123"/>
+</kw>
+<arg>tomsmith</arg>
+<arg>SuperSecretPassword!</arg>
+<status status="PASS" start="2024-10-25T23:23:01.665438" elapsed="0.486619"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:02.178690" level="INFO">Element 'xpath://div[@id='flash']' contains text 'You logged into a secure area!'.</msg>
+<arg>xpath://div[@id='flash']</arg>
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-10-25T23:23:02.152558" elapsed="0.026132"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:02.179199" level="INFO">Clicking link '//a[@class='button secondary radius']'.</msg>
+<arg>//a[@class='button secondary radius']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:02.179199" elapsed="0.282539"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:02.482844" level="INFO">Element 'xpath://div[@id='flash']' contains text 'You logged out of the secure area!'.</msg>
+<arg>xpath://div[@id='flash']</arg>
+<arg>You logged out of the secure area!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-10-25T23:23:02.462242" elapsed="0.020602"/>
+</kw>
+<kw name="Inicio Sesion 9" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:02.483345" level="INFO">Typing text 'tomsmith1' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:02.483345" elapsed="0.071860"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:02.555708" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:02.555708" elapsed="0.091958"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:02.648170" level="INFO">Clicking element 'xpath://button[@class='radius']'.</msg>
+<arg>xpath://button[@class='radius']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:02.648170" elapsed="0.239780"/>
+</kw>
+<arg>tomsmith1</arg>
+<arg>SuperSecretPassword!</arg>
+<status status="PASS" start="2024-10-25T23:23:02.482844" elapsed="0.405608"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:02.927146" level="INFO">Element 'xpath://div[@id='flash']' contains text 'Your username is invalid!'.</msg>
+<arg>xpath://div[@id='flash']</arg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-10-25T23:23:02.888956" elapsed="0.038190"/>
+</kw>
+<kw name="Inicio Sesion 9" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:02.928150" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:02.927647" elapsed="0.073869"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:03.002019" level="INFO">Typing text 'SuperS1ecretPassword!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:03.001516" elapsed="0.104018"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:03.106038" level="INFO">Clicking element 'xpath://button[@class='radius']'.</msg>
+<arg>xpath://button[@class='radius']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T23:23:03.106038" elapsed="0.318104"/>
+</kw>
+<arg>tomsmith</arg>
+<arg>SuperS1ecretPassword!</arg>
+<status status="PASS" start="2024-10-25T23:23:02.927647" elapsed="0.496998"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-25T23:23:03.439720" level="INFO">Element 'xpath://div[@id='flash']' contains text 'Your password is invalid!'.</msg>
+<arg>xpath://div[@id='flash']</arg>
+<arg>Your password is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-10-25T23:23:03.424645" elapsed="0.015576"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-25T23:23:03.440221" elapsed="2.186432"/>
+</kw>
+<status status="PASS" start="2024-10-25T23:22:58.294353" elapsed="7.332300"/>
+</test>
+<status status="PASS" start="2024-10-25T23:22:18.143619" elapsed="47.484038"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Test">Test</stat>
 </suite>
 </statistics>
 <errors>

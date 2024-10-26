@@ -15,3 +15,9 @@ Verificar cantidad botones
     [Arguments]    ${xpath}    ${cantidad}
     ${CantidadBotones}=     Get Element Count   ${xpath}
     Should Be Equal as Integers                 ${CantidadBotones}  ${cantidad}
+
+Inicio Sesion 9
+    [Arguments]    ${user}    ${password}
+    Input text                                  id:username     ${user}
+    Input text                                  id:password     ${password}
+    Click Element                               xpath://button[@class='radius']
