@@ -5,7 +5,7 @@ Resource    ../Datos/variables.robot
 Test Teardown    Close Browser
 
 *** Test Cases ***
-Agregar/Quitar Elementos
+Agregar/Quitar Elementos 1
     Iniciar Navegador   ${URL_1}    ${BROWSER}
     Wait Until Element is Visible               xpath://button  10s
     Dar click N veces                           20     xpath://button
@@ -15,7 +15,12 @@ Agregar/Quitar Elementos
     Sleep                                       2s
     Verificar cantidad botones                  //button[@Class='added-manually']       0
 
-Drag and Drop
+Autenticacion Basica 2
+    Iniciar Navegador   ${URL_2}    ${BROWSER}
+    Test Teardown    Close Browser
+
+
+Drag and Drop 6
     Iniciar Navegador   ${URL_6}    ${BROWSER}
     Sleep                                       2s
     Drag and Drop                               //header[text()='A']    //div[@id='column-b']
@@ -24,7 +29,7 @@ Drag and Drop
     Drag and Drop                               //header[text()='B']    //div[@id='column-a']
     Element Should Contain                      //div[@id='column-a']   B
 
-Autenticación con Formulario
+Autenticación con Formulario 9
     Iniciar Navegador   ${URL_9}    ${BROWSER}
     Inicio Sesion 9                             tomsmith    SuperSecretPassword!
     Element Should Contain                      xpath://div[@id='flash']    You logged into a secure area!
