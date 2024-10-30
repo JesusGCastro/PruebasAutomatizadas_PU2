@@ -17,7 +17,8 @@ Agregar/Quitar Elementos 1
 
 Autenticacion Basica 2
     Iniciar Navegador   ${URL_2}    ${BROWSER}
-    Test Teardown    Close Browser
+    Wait Until Element is Visible   xpath://div[@id="content"]
+    Page Should Contain        Basic Auth
 
 
 Drag and Drop 6

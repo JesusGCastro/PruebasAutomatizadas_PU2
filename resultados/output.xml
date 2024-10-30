@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-10-30T13:37:32.794995" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\Hector Espinoza\Documents\GitHub\PruebasAutomatizadas_PU2\PruebasAutomatizadas_PU2\Test\test.robot">
+<test id="s1-t1" name="Autenticacion Basica 2" line="10">
+<kw name="Iniciar Navegador" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-30T13:37:32.901268" level="INFO">Opening browser 'chrome' to base url 'https://admin:admin@the-internet.herokuapp.com/basic_auth'.</msg>
+<msg time="2024-10-30T13:37:33.046020" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.70); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-30T13:37:32.901147" elapsed="2.393537"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-30T13:37:35.294856" elapsed="0.029657"/>
+</kw>
+<arg>${URL_2}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2024-10-30T13:37:32.900776" elapsed="2.423818"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://div[@id="content"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-30T13:37:35.324750" elapsed="0.010479"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-30T13:37:35.341545" level="INFO">Current page contains text 'Basic Auth'.</msg>
+<arg>Basic Auth</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-30T13:37:35.335391" elapsed="0.006288"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-30T13:37:35.342031" elapsed="2.071308"/>
+</kw>
+<status status="PASS" start="2024-10-30T13:37:32.900435" elapsed="4.513090"/>
+</test>
+<status status="PASS" start="2024-10-30T13:37:32.795672" elapsed="4.618391"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-30T13:37:33.046020" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.70); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
