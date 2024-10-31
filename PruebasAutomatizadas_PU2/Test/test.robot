@@ -16,9 +16,28 @@ Agregar/Quitar Elementos 1
     Verificar cantidad botones                  //button[@Class='added-manually']       0
 
 Autenticacion Basica 2
-    Iniciar Navegador   ${URL_2}    ${BROWSER}
+    Iniciar Navegador   ${URL_2_0}   ${BROWSER}
     Wait Until Element is Visible   xpath://div[@id="content"]
     Page Should Contain        Basic Auth
+    Close Browser
+    Iniciar Navegador   ${URL_2_1}    ${BROWSER}
+    Page Should Not Contain        Basic Auth
+
+Checkboxes 3
+    Iniciar Navegador    ${URL_3}   ${BROWSER}
+    Wait Until Element is Visible   xpath://form[@id="checkboxes"]
+    Unselect Checkbox               xpath://form[@id="checkboxes"]/input[2]
+    Select Checkbox                 xpath://form[@id="checkboxes"]/input[1]
+    Checkbox Should Be Selected     xpath://form[@id="checkboxes"]/input[1]
+    Select Checkbox                 xpath://form[@id="checkboxes"]/input[2]
+    Checkbox Should Be Selected     xpath://form[@id="checkboxes"]/input[2]
+
+Context Menu 4
+    Iniciar Navegador    ${url_4}   ${BROWSER}
+    Wait Until Element is Visible   xpath://div[@id="hot-spot"]
+    Execute Javascript    var element = document.evaluate("//div[@id='hot-spot']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; var evt = new MouseEvent('contextmenu', {bubbles: true, cancelable: true, view: window}); element.dispatchEvent(evt);
+    Alert Should Be Present
+    Alert Should Not Be Present
 
 
 Drag and Drop 6

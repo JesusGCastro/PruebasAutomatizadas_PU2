@@ -1,42 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-10-30T13:37:32.794995" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-10-30T23:17:28.109430" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="C:\Users\Hector Espinoza\Documents\GitHub\PruebasAutomatizadas_PU2\PruebasAutomatizadas_PU2\Test\test.robot">
-<test id="s1-t1" name="Autenticacion Basica 2" line="10">
+<test id="s1-t1" name="Context Menu 4" line="10">
 <kw name="Iniciar Navegador" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-30T13:37:32.901268" level="INFO">Opening browser 'chrome' to base url 'https://admin:admin@the-internet.herokuapp.com/basic_auth'.</msg>
-<msg time="2024-10-30T13:37:33.046020" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.70); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-10-30T23:17:28.236905" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/context_menu'.</msg>
+<msg time="2024-10-30T23:17:28.391547" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.70); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-30T13:37:32.901147" elapsed="2.393537"/>
+<status status="PASS" start="2024-10-30T23:17:28.236715" elapsed="4.406517"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-30T13:37:35.294856" elapsed="0.029657"/>
+<status status="PASS" start="2024-10-30T23:17:32.643407" elapsed="0.032960"/>
 </kw>
-<arg>${URL_2}</arg>
+<arg>${url_4}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2024-10-30T13:37:32.900776" elapsed="2.423818"/>
+<status status="PASS" start="2024-10-30T23:17:28.236259" elapsed="4.440207"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath://div[@id="content"]</arg>
+<arg>xpath://div[@id="hot-spot"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-30T13:37:35.324750" elapsed="0.010479"/>
+<status status="PASS" start="2024-10-30T23:17:32.676720" elapsed="0.009967"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-30T13:37:35.341545" level="INFO">Current page contains text 'Basic Auth'.</msg>
-<arg>Basic Auth</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-10-30T13:37:35.335391" elapsed="0.006288"/>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-10-30T23:17:32.687045" level="INFO">Executing JavaScript:
+var element = document.evaluate("//div[@id='hot-spot']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; var evt = new MouseEvent('contextmenu', {bubbles: true, cancelable: true, view: window}); element.dispatchEvent(evt);
+Without any arguments.</msg>
+<arg>var element = document.evaluate("//div[@id='hot-spot']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; var evt = new MouseEvent('contextmenu', {bubbles: true, cancelable: true, view: window}); element.dispatchEvent(evt);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-10-30T23:17:32.686832" elapsed="0.004244"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-10-30T23:17:32.691278" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-10-30T23:17:32.691213" elapsed="0.001683"/>
+</kw>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2024-10-30T23:17:32.693043" elapsed="5.012402"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-30T13:37:35.342031" elapsed="2.071308"/>
+<status status="PASS" start="2024-10-30T23:17:37.705764" elapsed="2.073772"/>
 </kw>
-<status status="PASS" start="2024-10-30T13:37:32.900435" elapsed="4.513090"/>
+<status status="PASS" start="2024-10-30T23:17:28.235826" elapsed="11.543866"/>
 </test>
-<status status="PASS" start="2024-10-30T13:37:32.795672" elapsed="4.618391"/>
+<status status="PASS" start="2024-10-30T23:17:28.110229" elapsed="11.669964"/>
 </suite>
 <statistics>
 <total>
@@ -49,6 +60,6 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-10-30T13:37:33.046020" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.70); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-10-30T23:17:28.391547" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.70); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
