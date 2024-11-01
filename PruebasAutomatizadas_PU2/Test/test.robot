@@ -39,6 +39,29 @@ Context Menu 4
     Alert Should Be Present
     Alert Should Not Be Present
 
+Elementos que desaparecen
+    Iniciar Navegador    ${url_10}   ${BROWSER}
+        Maximize Browser Window
+
+    #Actualizar hasta que el botón sea visible
+    ${visible} =    Run Keyword And Return Status    Element Should Be Visible    ${GALLERY_BUTTON_XPATH}
+    WHILE    not ${visible}
+        Reload Page
+        Sleep    1s
+        ${visible} =    Run Keyword And Return Status    Element Should Be Visible    ${GALLERY_BUTTON_XPATH}
+    END
+
+    Element Should Be Visible    ${GALLERY_BUTTON_XPATH}
+
+    #Actualizar hasta que el botón no sea visible
+    ${visible} =    Run Keyword And Return Status    Element Should Be Visible    ${GALLERY_BUTTON_XPATH}
+    WHILE    ${visible}
+        Reload Page
+        Sleep    1s
+        ${visible} =    Run Keyword And Return Status    Element Should Be Visible    ${GALLERY_BUTTON_XPATH}
+    END
+
+    Element Should Not Be Visible    ${GALLERY_BUTTON_XPATH}
 
 Drag and Drop 6
     Iniciar Navegador   ${URL_6}    ${BROWSER}

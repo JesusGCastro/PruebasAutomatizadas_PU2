@@ -1,53 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-10-30T23:17:28.109430" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="C:\Users\Hector Espinoza\Documents\GitHub\PruebasAutomatizadas_PU2\PruebasAutomatizadas_PU2\Test\test.robot">
-<test id="s1-t1" name="Context Menu 4" line="10">
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-11-01T16:15:09.535602" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="E:\Github\PruebasAutomatizadas_PU2\PruebasAutomatizadas_PU2\Test\test.robot">
+<test id="s1-t1" name="Elementos que desaparecen" line="42">
 <kw name="Iniciar Navegador" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-30T23:17:28.236905" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/context_menu'.</msg>
-<msg time="2024-10-30T23:17:28.391547" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.70); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-01T16:15:09.744483" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/disappearing_elements'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-30T23:17:28.236715" elapsed="4.406517"/>
+<status status="PASS" start="2024-11-01T16:15:09.744280" elapsed="2.942258"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-30T23:17:32.643407" elapsed="0.032960"/>
+<status status="PASS" start="2024-11-01T16:15:12.686928" elapsed="0.034072"/>
 </kw>
-<arg>${url_4}</arg>
+<arg>${url_10}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2024-10-30T23:17:28.236259" elapsed="4.440207"/>
+<status status="PASS" start="2024-11-01T16:15:09.743666" elapsed="2.977451"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath://div[@id="hot-spot"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-30T23:17:32.676720" elapsed="0.009967"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-01T16:15:12.721375" elapsed="0.002211"/>
 </kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-10-30T23:17:32.687045" level="INFO">Executing JavaScript:
-var element = document.evaluate("//div[@id='hot-spot']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; var evt = new MouseEvent('contextmenu', {bubbles: true, cancelable: true, view: window}); element.dispatchEvent(evt);
-Without any arguments.</msg>
-<arg>var element = document.evaluate("//div[@id='hot-spot']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; var evt = new MouseEvent('contextmenu', {bubbles: true, cancelable: true, view: window}); element.dispatchEvent(evt);</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-10-30T23:17:32.686832" elapsed="0.004244"/>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-11-01T16:15:12.742914" level="INFO">Element '//a[text()="Gallery"]' is displayed.</msg>
+<arg>${GALLERY_BUTTON_XPATH}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-01T16:15:12.723952" elapsed="0.019039"/>
 </kw>
-<kw name="Alert Should Be Present" owner="SeleniumLibrary">
-<msg time="2024-10-30T23:17:32.691278" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<doc>Verifies that an alert is present and by default, accepts it.</doc>
-<status status="PASS" start="2024-10-30T23:17:32.691213" elapsed="0.001683"/>
+<msg time="2024-11-01T16:15:12.743113" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${GALLERY_BUTTON_XPATH}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-01T16:15:12.723791" elapsed="0.019346"/>
 </kw>
-<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
-<doc>Verifies that no alert is present.</doc>
-<status status="PASS" start="2024-10-30T23:17:32.693043" elapsed="5.012402"/>
+<while condition="not ${visible}">
+<iter>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2024-11-01T16:15:12.743563" elapsed="0.000025"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-01T16:15:12.743674" elapsed="0.000023"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${GALLERY_BUTTON_XPATH}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-11-01T16:15:12.743788" elapsed="0.000025"/>
+</kw>
+<status status="NOT RUN" start="2024-11-01T16:15:12.743311" elapsed="0.000542"/>
+</iter>
+<status status="NOT RUN" start="2024-11-01T16:15:12.743309" elapsed="0.000575"/>
+</while>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-11-01T16:15:12.757769" level="INFO">Element '//a[text()="Gallery"]' is displayed.</msg>
+<arg>${GALLERY_BUTTON_XPATH}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-01T16:15:12.744069" elapsed="0.013773"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-11-01T16:15:12.769627" level="INFO">Element '//a[text()="Gallery"]' is displayed.</msg>
+<arg>${GALLERY_BUTTON_XPATH}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-01T16:15:12.758224" elapsed="0.011530"/>
+</kw>
+<msg time="2024-11-01T16:15:12.770009" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${GALLERY_BUTTON_XPATH}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-01T16:15:12.758074" elapsed="0.011970"/>
+</kw>
+<while condition="${visible}">
+<iter>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2024-11-01T16:15:12.770504" elapsed="0.121657"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-01T16:15:13.892732" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-01T16:15:12.892329" elapsed="1.000715"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-11-01T16:15:13.992540" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-01T16:15:13.992671" level="FAIL">Element with locator '//a[text()="Gallery"]' not found.</msg>
+<arg>${GALLERY_BUTTON_XPATH}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-11-01T16:15:13.894296" elapsed="0.101066">Element with locator '//a[text()="Gallery"]' not found.</status>
+</kw>
+<msg time="2024-11-01T16:15:13.995478" level="INFO">${visible} = False</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${GALLERY_BUTTON_XPATH}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-01T16:15:13.893654" elapsed="0.101848"/>
+</kw>
+<status status="PASS" start="2024-11-01T16:15:12.770279" elapsed="1.225269"/>
+</iter>
+<status status="PASS" start="2024-11-01T16:15:12.770276" elapsed="1.225377"/>
+</while>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-11-01T16:15:14.003703" level="INFO">Element '//a[text()="Gallery"]' did not exist.</msg>
+<arg>${GALLERY_BUTTON_XPATH}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-11-01T16:15:13.995905" elapsed="0.007870"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-30T23:17:37.705764" elapsed="2.073772"/>
+<status status="PASS" start="2024-11-01T16:15:14.004071" elapsed="2.178992"/>
 </kw>
-<status status="PASS" start="2024-10-30T23:17:28.235826" elapsed="11.543866"/>
+<status status="PASS" start="2024-11-01T16:15:09.743023" elapsed="6.441065"/>
 </test>
-<status status="PASS" start="2024-10-30T23:17:28.110229" elapsed="11.669964"/>
+<status status="PASS" start="2024-11-01T16:15:09.537639" elapsed="6.648522"/>
 </suite>
 <statistics>
 <total>
@@ -60,6 +134,5 @@ Without any arguments.</msg>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-10-30T23:17:28.391547" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.70); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
