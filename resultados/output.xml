@@ -1,127 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-11-01T16:15:09.535602" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-11-01T16:36:30.744643" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="E:\Github\PruebasAutomatizadas_PU2\PruebasAutomatizadas_PU2\Test\test.robot">
-<test id="s1-t1" name="Elementos que desaparecen" line="42">
-<kw name="Iniciar Navegador" owner="keywords">
+<test id="s1-t1" name="Controles dinamicos" line="75">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-01T16:15:09.744483" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/disappearing_elements'.</msg>
-<arg>${URL}</arg>
+<msg time="2024-11-01T16:36:30.955563" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/dynamic_controls'.</msg>
+<arg>${URL_11}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-01T16:15:09.744280" elapsed="2.942258"/>
+<status status="PASS" start="2024-11-01T16:36:30.955322" elapsed="1.950487"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-01T16:15:12.686928" elapsed="0.034072"/>
+<status status="PASS" start="2024-11-01T16:36:32.906252" elapsed="1.037213"/>
 </kw>
-<arg>${url_10}</arg>
-<arg>${BROWSER}</arg>
-<status status="PASS" start="2024-11-01T16:15:09.743666" elapsed="2.977451"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-01T16:15:12.721375" elapsed="0.002211"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-01T16:36:33.944488" level="INFO">Clicking element '//button[text()="Remove"]'.</msg>
+<arg>//button[text()="Remove"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-01T16:36:33.944003" elapsed="0.057898"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-01T16:15:12.742914" level="INFO">Element '//a[text()="Gallery"]' is displayed.</msg>
-<arg>${GALLERY_BUTTON_XPATH}</arg>
+<msg time="2024-11-01T16:36:34.025929" level="INFO">Element '//input[@type="checkbox"]' is displayed.</msg>
+<arg>//input[@type="checkbox"]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-01T16:15:12.723952" elapsed="0.019039"/>
+<status status="PASS" start="2024-11-01T16:36:34.003593" elapsed="0.022416"/>
 </kw>
-<msg time="2024-11-01T16:15:12.743113" level="INFO">${visible} = True</msg>
-<var>${visible}</var>
+<msg time="2024-11-01T16:36:34.026137" level="INFO">${checkbox_exists} = True</msg>
+<var>${checkbox_exists}</var>
 <arg>Element Should Be Visible</arg>
-<arg>${GALLERY_BUTTON_XPATH}</arg>
+<arg>//input[@type="checkbox"]</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-01T16:15:12.723791" elapsed="0.019346"/>
+<status status="PASS" start="2024-11-01T16:36:34.003324" elapsed="0.022838"/>
 </kw>
-<while condition="not ${visible}">
+<while condition="${checkbox_exists}">
 <iter>
-<kw name="Reload Page" owner="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="NOT RUN" start="2024-11-01T16:15:12.743563" elapsed="0.000025"/>
-</kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-01T16:36:35.026896" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-11-01T16:15:12.743674" elapsed="0.000023"/>
+<status status="PASS" start="2024-11-01T16:36:34.026581" elapsed="1.000438"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
-<var>${visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>${GALLERY_BUTTON_XPATH}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" start="2024-11-01T16:15:12.743788" elapsed="0.000025"/>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-11-01T16:36:35.042324" level="INFO">Element '//input[@type="checkbox"]' is displayed.</msg>
+<arg>//input[@type="checkbox"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-01T16:36:35.027430" elapsed="0.014970"/>
 </kw>
-<status status="NOT RUN" start="2024-11-01T16:15:12.743311" elapsed="0.000542"/>
+<msg time="2024-11-01T16:36:35.042517" level="INFO">${checkbox_exists} = True</msg>
+<var>${checkbox_exists}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//input[@type="checkbox"]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-01T16:36:35.027228" elapsed="0.015312"/>
+</kw>
+<status status="PASS" start="2024-11-01T16:36:34.026324" elapsed="1.016267"/>
 </iter>
-<status status="NOT RUN" start="2024-11-01T16:15:12.743309" elapsed="0.000575"/>
-</while>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-01T16:15:12.757769" level="INFO">Element '//a[text()="Gallery"]' is displayed.</msg>
-<arg>${GALLERY_BUTTON_XPATH}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-01T16:15:12.744069" elapsed="0.013773"/>
-</kw>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-01T16:15:12.769627" level="INFO">Element '//a[text()="Gallery"]' is displayed.</msg>
-<arg>${GALLERY_BUTTON_XPATH}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-01T16:15:12.758224" elapsed="0.011530"/>
-</kw>
-<msg time="2024-11-01T16:15:12.770009" level="INFO">${visible} = True</msg>
-<var>${visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>${GALLERY_BUTTON_XPATH}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-01T16:15:12.758074" elapsed="0.011970"/>
-</kw>
-<while condition="${visible}">
 <iter>
-<kw name="Reload Page" owner="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" start="2024-11-01T16:15:12.770504" elapsed="0.121657"/>
-</kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-01T16:15:13.892732" level="INFO">Slept 1 second.</msg>
+<msg time="2024-11-01T16:36:36.043413" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-01T16:15:12.892329" elapsed="1.000715"/>
+<status status="PASS" start="2024-11-01T16:36:35.042798" elapsed="1.000707"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-01T16:15:13.992540" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-01T16:15:13.992671" level="FAIL">Element with locator '//a[text()="Gallery"]' not found.</msg>
-<arg>${GALLERY_BUTTON_XPATH}</arg>
+<msg time="2024-11-01T16:36:36.057101" level="INFO">Element '//input[@type="checkbox"]' is displayed.</msg>
+<arg>//input[@type="checkbox"]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-11-01T16:15:13.894296" elapsed="0.101066">Element with locator '//a[text()="Gallery"]' not found.</status>
+<status status="PASS" start="2024-11-01T16:36:36.043804" elapsed="0.013370"/>
 </kw>
-<msg time="2024-11-01T16:15:13.995478" level="INFO">${visible} = False</msg>
-<var>${visible}</var>
+<msg time="2024-11-01T16:36:36.057320" level="INFO">${checkbox_exists} = True</msg>
+<var>${checkbox_exists}</var>
 <arg>Element Should Be Visible</arg>
-<arg>${GALLERY_BUTTON_XPATH}</arg>
+<arg>//input[@type="checkbox"]</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-01T16:15:13.893654" elapsed="0.101848"/>
+<status status="PASS" start="2024-11-01T16:36:36.043662" elapsed="0.013680"/>
 </kw>
-<status status="PASS" start="2024-11-01T16:15:12.770279" elapsed="1.225269"/>
+<status status="PASS" start="2024-11-01T16:36:35.042631" elapsed="1.014758"/>
 </iter>
-<status status="PASS" start="2024-11-01T16:15:12.770276" elapsed="1.225377"/>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-01T16:36:37.058108" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-01T16:36:36.057578" elapsed="1.000839"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-11-01T16:36:37.187125" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-01T16:36:37.187248" level="FAIL">Element with locator '//input[@type="checkbox"]' not found.</msg>
+<arg>//input[@type="checkbox"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-11-01T16:36:37.059916" elapsed="0.130007">Element with locator '//input[@type="checkbox"]' not found.</status>
+</kw>
+<msg time="2024-11-01T16:36:37.190040" level="INFO">${checkbox_exists} = False</msg>
+<var>${checkbox_exists}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//input[@type="checkbox"]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-01T16:36:37.059040" elapsed="0.131024"/>
+</kw>
+<status status="PASS" start="2024-11-01T16:36:36.057428" elapsed="1.132685"/>
+</iter>
+<status status="PASS" start="2024-11-01T16:36:34.026321" elapsed="3.163890"/>
 </while>
-<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-01T16:15:14.003703" level="INFO">Element '//a[text()="Gallery"]' did not exist.</msg>
-<arg>${GALLERY_BUTTON_XPATH}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2024-11-01T16:15:13.995905" elapsed="0.007870"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-01T16:36:37.190612" level="INFO">Clicking element '//button[text()="Enable"]'.</msg>
+<arg>//button[text()="Enable"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-01T16:36:37.190476" elapsed="0.034855"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//input[@type="text"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-11-01T16:36:37.225620" elapsed="3.008365"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-01T16:15:14.004071" elapsed="2.178992"/>
+<status status="PASS" start="2024-11-01T16:36:40.234306" elapsed="2.204170"/>
 </kw>
-<status status="PASS" start="2024-11-01T16:15:09.743023" elapsed="6.441065"/>
+<status status="PASS" start="2024-11-01T16:36:30.954460" elapsed="11.484684"/>
 </test>
-<status status="PASS" start="2024-11-01T16:15:09.537639" elapsed="6.648522"/>
+<status status="PASS" start="2024-11-01T16:36:30.746770" elapsed="11.695016"/>
 </suite>
 <statistics>
 <total>

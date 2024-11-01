@@ -72,6 +72,23 @@ Drag and Drop 6
     Drag and Drop                               //header[text()='B']    //div[@id='column-a']
     Element Should Contain                      //div[@id='column-a']   B
 
+Controles dinamicos
+    Open Browser    ${URL_11}    ${BROWSER}
+    Maximize Browser Window
+
+    #Remover el checkbox
+    Click Element    //button[text()="Remove"]
+
+    ${checkbox_exists} =    Run Keyword And Return Status    Element Should Be Visible    //input[@type="checkbox"]
+    WHILE    ${checkbox_exists}
+        Sleep    1s
+        ${checkbox_exists} =    Run Keyword And Return Status    Element Should Be Visible    //input[@type="checkbox"]
+    END
+
+    #Habilitar el input
+    Click Element    //button[text()="Enable"]
+    Wait Until Element Is Enabled    //input[@type="text"]    timeout=10s
+
 Autenticación con Formulario 9
     Iniciar Navegador   ${URL_9}    ${BROWSER}
     Inicio Sesion 9                             tomsmith    SuperSecretPassword!

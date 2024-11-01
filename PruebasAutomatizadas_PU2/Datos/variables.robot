@@ -9,3 +9,4 @@ ${URL_6}    https://the-internet.herokuapp.com/drag_and_drop
 ${URL_9}    https://the-internet.herokuapp.com/login
 ${URL_10}    https://the-internet.herokuapp.com/disappearing_elements
 ${GALLERY_BUTTON_XPATH}    //a[text()="Gallery"]
+${URL_11}   https://the-internet.herokuapp.com/dynamic_controls
