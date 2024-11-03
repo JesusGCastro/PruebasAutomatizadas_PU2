@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Resource    ../Recursos/keywords.robot
 Resource    ../Datos/variables.robot
-Test Teardown    Close Browser
+Test Teardown    Cerrar Navegador
 
 *** Test Cases ***
 Agregar/Quitar Elementos 1
@@ -89,6 +89,16 @@ Controles dinamicos
     Click Element    //button[text()="Enable"]
     Wait Until Element Is Enabled    //input[@type="text"]    timeout=10s
 
+Menú Flotante 8
+    Iniciar Navegador   ${URL_8}    ${BROWSER}
+    Scroll Element Into View        xpath://*[@id="page-footer"]
+    Wait Until Element is Visible   xpath://*[@id="menu"]
+    Element Should Be Visible       xpath://*[@id="menu"]
+    Element Should Be Visible       xpath://*[@id="menu"]/ul/li[1]/a
+    Element Should Be Visible       xpath://*[@id="menu"]/ul/li[2]/a
+    Element Should Be Visible       xpath://*[@id="menu"]/ul/li[3]/a
+    Element Should Be Visible       xpath://*[@id="menu"]/ul/li[4]/a
+
 Autenticación con Formulario 9
     Iniciar Navegador   ${URL_9}    ${BROWSER}
     Inicio Sesion 9                             tomsmith    SuperSecretPassword!
@@ -99,3 +109,18 @@ Autenticación con Formulario 9
     Element Should Contain                      xpath://div[@id='flash']    Your username is invalid!
     Inicio Sesion 9                             tomsmith    SuperS1ecretPassword!
     Element Should Contain                      xpath://div[@id='flash']    Your password is invalid!
+
+Teclas Presionadas 10
+    Iniciar Navegador  ${URL_12}    ${BROWSER}
+    Wait Until Element is Visible   xpath://*[@id="target"]
+    Click Element                   xpath://*[@id="target"]
+
+    # Presionar la tecla ESC y validar el mensaje
+    Press Keys                      xpath://*[@id="target"]    ESCAPE
+    Element Text Should Be          xpath://*[@id="result"]    You entered: ESCAPE
+
+    # Presionar la barra espaciadora y validar el mensaje
+    Press Keys                      xpath://*[@id="target"]    SPACE
+    Element Text Should Be          xpath://*[@id="result"]    You entered: SPACE
+
+    Cerrar Navegador

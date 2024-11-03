@@ -21,3 +21,7 @@ Inicio Sesion 9
     Input text                                  id:username     ${user}
     Input text                                  id:password     ${password}
     Click Element                               xpath://button[@class='radius']
+
+Cerrar Navegador
+    Sleep    2s
+    close browser
